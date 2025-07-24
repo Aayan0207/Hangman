@@ -1,0 +1,102 @@
+::placeholder {
+  color: black;
+}
+.square {
+  height: 45px;
+  width: 45px;
+  background-color: #b9d870;
+  border: 2px solid black;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(25, 175, 208, 0.6);
+}
+.form-container {
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(13, 45px);
+  grid-gap: 4px;
+  margin: 20px;
+}
+body {
+  background-image: url("../static/Hangman_Image.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+pre {
+  margin: 20px;
+  padding: 20px;
+  background-color: black;
+  border: 10px solid #b9d870;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  justify-content: right;
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  box-shadow: 5px 5px 5px rgba(25, 175, 208, 0.6);
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -1;
+}
+#check {
+  background-image: linear-gradient(
+    144deg,
+    #41d527,
+    rgba(39, 213, 100, 0.74) 50%,
+    #27d5bb
+  );
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(10, 124, 177, 0.7) 0 15px 30px -5px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  line-height: 1em;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  width: 120px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+#check:active,
+#check:hover {
+  outline: 0;
+}
+
+#check span {
+  background-color: rgb(3, 4, 28);
+  padding: 10px 5px;
+  border-radius: 6px;
+  transition: 300ms;
+}
+
+#check:hover span {
+  background: none;
+  padding: 2px;
+}
