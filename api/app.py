@@ -3,7 +3,7 @@ import secrets
 import os
 from . import hangman
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../templates", static_folder="../static")
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", secrets.token_hex(16))
 
 
