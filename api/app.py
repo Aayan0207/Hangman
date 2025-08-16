@@ -1,14 +1,11 @@
 from flask import Flask, render_template, request, session, jsonify
-from flask_session import Session
 import secrets
-import hangman
+import os
+from . import hangman
 
 app = Flask(__name__)
-app.config["SESSION_PERMANENT"] = False
-app.config["SESSION_TYPE"] = "filesystem"
-app.config["PERMANENT_SESSION_LIFETIME"] = 6000
-app.config["SECRET_KEY"] = secrets.token_hex(16)
-Session(app)
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", secrets.token_hex(16))
+
 
 @app.route("/", methods=["GET", "POST"])
 def play_hangman():
